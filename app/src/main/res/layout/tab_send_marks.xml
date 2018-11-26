@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/ScrollBar_padding_Bottom"
+        android:paddingLeft="4dp"
+        android:paddingRight="@dimen/ScrollBar_padding_Right"
+        android:paddingTop="@dimen/ScrollBar_padding_top"
+        android:weightSum="2">
+
+        <include
+            android:id="@+id/layoutspinnerofclass"
+            layout="@layout/spinner_of_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinnerForTestList"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:layout_marginTop="@dimen/margin6"
+            android:layout_weight="1"
+            android:background="@drawable/spinner_back"
+            android:textSize="@dimen/text_size_16" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTotalMarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearMain"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Total Mark: "
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextForTotalMarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="Total Marks"
+            android:inputType="number"
+            android:maxLength="7"
+            android:textAlignment="center"
+            android:singleLine="true"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearSelectDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutTotalMarks"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Select Date: "
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSelectConductedDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSendSMS"
+        android:layout_below="@+id/linearSelectDate">
+
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/swipeRefreshLayout">
+
+            <RelativeLayout
+                android:id="@+id/relativeOfEnable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewOfStudentList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSendSMS"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/baseline_add_circle_white_24dp"
+        android:visibility="gone"
+        app:fabSize="mini" />
+
+    <Button
+        android:id="@+id/btnSendSMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:text="Send Marks"
+        android:textColor="@color/btn_text_color"
+        android:textSize="@dimen/Button_txt_size" />
+
+
+</RelativeLayout>
+

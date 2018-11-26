@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/AppBackColor">
+
+
+    <include
+        android:id="@+id/adverties_panel1"
+        layout="@layout/banner_containt_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adverties_panel1"
+        android:orientation="horizontal"
+        android:padding="@dimen/ScrollBar_padding_Right">
+
+        <!--<android.support.v7.widget.AppCompatSpinner-->
+            <!--android:id="@+id/spinnerForClass"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:background="@drawable/spinner_back"-->
+            <!--android:textSize="@dimen/text_size_16"-->
+            <!--android:layout_marginTop="@dimen/margin6"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--/>-->
+
+        <include
+            android:id="@+id/layoutspinnerofclass"
+            layout="@layout/spinner_of_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/linear11"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<Spinner-->
+                <!--android:id="@+id/spinnerForClass"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:background="@drawable/textview_background_for_login"></Spinner>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="@color/colorAccent"-->
+                <!--android:gravity="end">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:src="@mipmap/ic_arrow_drop_down_white_24dp" />-->
+            <!--</LinearLayout>-->
+
+        <!--</RelativeLayout>-->
+    </LinearLayout>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adverties_panel"
+        android:layout_below="@+id/linear"
+        android:paddingTop="7dp">
+
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/swipeRefreshLayout">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include
+        android:id="@+id/adverties_panel"
+        layout="@layout/banner_containt" />
+</RelativeLayout>

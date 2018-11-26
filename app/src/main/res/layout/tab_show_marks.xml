@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackColor"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/adverties_panel1"
+        layout="@layout/banner_containt_above" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin6"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layoutspinnerofclass"
+            layout="@layout/spinner_of_class" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin6"
+            android:background="@drawable/spin_top_box">
+
+            <Spinner
+                android:id="@+id/spinnerForTestList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toLeftOf="@+id/vLine1"
+                android:layout_toStartOf="@+id/vLine1"
+                android:background="@null"
+                android:focusable="true"
+                android:gravity="center_vertical" />
+
+            <View
+                android:id="@+id/vLine1"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/caseTypSpinArrow1"
+                android:layout_toStartOf="@+id/caseTypSpinArrow1"
+                android:background="@color/ProgressDialogColor" />
+
+            <ImageView
+                android:id="@+id/caseTypSpinArrow1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/downarrow" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin6"
+            android:background="@drawable/spin_top_box">
+
+            <Spinner
+                android:id="@+id/spinnerForStudentName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toLeftOf="@+id/vLine2"
+                android:layout_toStartOf="@+id/vLine2"
+                android:background="@null"
+                android:focusable="true"
+                android:gravity="center_vertical" />
+
+            <View
+                android:id="@+id/vLine2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/caseTypSpinArrow2"
+                android:layout_toStartOf="@+id/caseTypSpinArrow2"
+                android:background="@color/ProgressDialogColor" />
+
+            <ImageView
+                android:id="@+id/caseTypSpinArrow2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/downarrow" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_size_18"
+            android:orientation="vertical">
+
+            <com.mksmcqapplicationtest.View.CustomTextView
+                android:id="@+id/txtTheoryMarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="@string/test_result"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <com.mksmcqapplicationtest.View.CustomTextView
+                android:id="@+id/txtFormula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/Test_Result_Details"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/adverties_panel"
+        layout="@layout/banner_containt" />
+</LinearLayout>
+

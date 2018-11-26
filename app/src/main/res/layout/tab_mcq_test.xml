@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/AppBackColor"
+    >
+
+
+    <include
+        android:id="@+id/adverties_panel1"
+        layout="@layout/banner_containt_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adverties_panel1"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/ScrollBar_padding_Bottom"
+        android:paddingLeft="@dimen/ScrollBar_padding_Right"
+        android:paddingRight="@dimen/ScrollBar_padding_Right"
+        android:paddingTop="@dimen/ScrollBar_padding_top"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:id="@+id/linear11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinnerForClass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/textview_background_for_login"></Spinner>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorAccent"
+                android:gravity="end">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_drop_down_white_24dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adverties_panel"
+        android:layout_below="@+id/linear"
+        android:layout_marginTop="7dp">
+
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/swipeRefreshLayout">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scrollbars="vertical">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+        </android.support.design.widget.CoordinatorLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/txtmovingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adverties_panel"
+        android:hint="Moving text"
+        android:singleLine="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/adverties_panel"
+        layout="@layout/banner_containt" />
+
+</RelativeLayout>

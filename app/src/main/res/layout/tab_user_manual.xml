@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackColor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/pdfName"
+        android:text="Click Here To Open Pdf"
+        android:textSize="20dp"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/pdfName"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:text="@string/fa_pdf"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="100dp"
+        android:textStyle="bold" />
+</RelativeLayout>

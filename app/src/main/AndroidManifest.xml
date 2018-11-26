@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mksmcqapplicationtest">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!--this tag is copy from anand mainfest file for screen size setting-->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_logo_c"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name=".ui.fragments.ui.receiver.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="my.action.string" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ui.fragments.ui.receiver.Receiver" />
+
+        <activity
+            android:name=".MaterialDesignMainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MaterialDesignLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateUnchanged" />
+        <activity
+            android:name=".ExamActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.fragments.DataFragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LauncherActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent">
+
+        </activity>
+        <activity
+            android:name=".ui.fragments.DetailResultFragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShowDetailFees"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutUs"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".MyProfileForTeacher"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyProfileForStudent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NotificationActivityInDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ImageSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MediaPlayer.MediaPlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Guest.MediaPlayActivityForGuest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Guest.SignUpForGuest"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".Guest.MyProfileForGuest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Guest.YoutubeVideoPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DevelopeBy"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+        <activity
+            android:name=".AnswerSheetUpload.AnswerSheetUploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AnswerSheetUpload.ShowAnwserSheetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FullScreenImage"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgotChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MediaPlayer.MusicPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddTheoryTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabStructure.Exam.TabExamActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabStructure.Attendance.TabAttendanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabStructure.Fees.TabFeesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabStructure.ActiveDeactive.TabActiveDeactiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabStructure.TabNotification.TabNotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabStructure.Guest.TabGuestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabStructure.Utility.TabUtilityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabStructure.Communication.TabCommunicationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabStructure.Other.TabOtherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TabStructure.Masters.TabMasterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EnglishSpeaking.EnglishSpeakingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name=".EnglishSpeaking.DetailResultFragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EnglishSpeaking.ExamListFragemtActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EnglishSpeaking.GivenTestListSearchStudentWise"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EnglishSpeaking.UnlockAudioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EnglishSpeaking.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EnglishSpeaking.ExamActivityEnglishSpeaking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InstructionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent" />
+        <!-- <activity android:name=".TabStructure.Masters.ShowReportWebViewActivity"></activity> -->
+
+    </application>
+
+</manifest>

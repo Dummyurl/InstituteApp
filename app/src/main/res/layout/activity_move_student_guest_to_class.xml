@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackColor"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBar"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/ScrollBar_padding_Bottom"
+        android:paddingLeft="@dimen/ScrollBar_padding_Right"
+        android:paddingRight="@dimen/ScrollBar_padding_Right"
+        android:paddingTop="@dimen/ScrollBar_padding_top">
+
+        <RelativeLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/ScrollBar_padding_Bottom"
+            android:paddingTop="@dimen/ScrollBar_padding_top">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="From Class     "
+                android:textAlignment="center"
+                android:textSize="12dp" />
+
+
+            <Spinner
+
+                android:id="@+id/spinnerFormClass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/txt1"
+                android:background="@drawable/textview_background_for_login"></Spinner>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorAccent"
+                android:gravity="end">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_drop_down_white_24dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/chkSelectAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:padding="5dp"
+        android:text="Select All"
+        android:textSize="10dp" />
+
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/LLForToClass"
+        android:layout_below="@+id/chkSelectAll">
+
+
+
+            <RelativeLayout
+                android:id="@+id/relativeOfEnable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewOfMoveData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/LLForToClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnMoveClass"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/ScrollBar_padding_Bottom"
+        android:paddingLeft="@dimen/ScrollBar_padding_Right"
+        android:paddingRight="@dimen/ScrollBar_padding_Right"
+        android:paddingTop="@dimen/ScrollBar_padding_top">
+
+        <RelativeLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/ScrollBar_padding_Bottom"
+            android:paddingTop="@dimen/ScrollBar_padding_top">
+
+            <TextView
+
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="To Class     "
+                android:textAlignment="center"
+                android:textSize="12dp" />
+
+            <Spinner
+                android:id="@+id/spinnerToClass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/txt2"
+                android:background="@drawable/textview_background_for_login"></Spinner>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorAccent"
+                android:gravity="end">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_drop_down_white_24dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnMoveClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:text="Move"
+        android:textColor="@color/btn_text_color"
+        android:textSize="@dimen/Button_txt_size" />
+
+</RelativeLayout>
+

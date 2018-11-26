@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <com.mksmcqapplicationtest.View.InputOpenFieldView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_view_top_margin_10"
+            android:visibility="visible">
+
+            <com.mksmcqapplicationtest.View.CustomEditText
+                android:id="@+id/txtQueHint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/hint"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_16" />
+        </com.mksmcqapplicationtest.View.InputOpenFieldView>
+
+        <com.mksmcqapplicationtest.View.InputOpenFieldView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.mksmcqapplicationtest.View.CustomEditText
+                android:id="@+id/txtQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/Question_hint"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_16" />
+        </com.mksmcqapplicationtest.View.InputOpenFieldView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdbA"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin6"
+                android:checked="true"
+                android:text="@string/a" />
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtAnsA"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/ans_a"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_16" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/rdbB"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin6"
+                android:text="@string/b" />
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtAnsB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/ans_b"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_16" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rdbC"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin6"
+                android:text="@string/c" />
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtAnsC"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/ans_c"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_16" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdbD"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin6"
+                android:text="@string/d" />
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtAnsD"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/ans_d"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_16" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rdbE"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin6"
+                android:text="@string/e" />
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtAnsE"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/ans_e"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_16" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdbF"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin6"
+                android:text="@string/f" />
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtAnsF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/ans_f"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_16" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtMarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/mark"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_16" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtAnsDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/answer_description"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_16" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/linear_layout_top_margin_20"
+            android:layout_marginTop="@dimen/margin6"
+            android:background="@drawable/spin_top_box">
+
+            <Spinner
+                android:id="@+id/spinnerForCategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toLeftOf="@+id/vLine1"
+                android:layout_toStartOf="@+id/vLine1"
+                android:background="@null"
+                android:focusable="true"
+                android:gravity="center_vertical" />
+
+            <View
+                android:id="@+id/vLine1"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/caseTypSpinArrow1"
+                android:layout_toStartOf="@+id/caseTypSpinArrow1"
+                android:background="@color/ProgressDialogColor" />
+
+            <ImageView
+                android:id="@+id/caseTypSpinArrow1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/downarrow" />
+
+        </RelativeLayout>
+
+
+        <com.mksmcqapplicationtest.View.CustomButton
+            android:id="@+id/btnAddQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_selector_red"
+            android:gravity="center"
+            android:text="@string/Add_Question"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackColor"
+    >
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_below="@id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:id="@+id/Linearlayoutclass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinnerForClass"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/spinner_back"
+                android:textSize="@dimen/text_size_16"
+                android:layout_marginTop="@dimen/margin6"
+                android:paddingLeft="5dp"
+                />
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/linear"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:padding="@dimen/ScrollBar_padding_Bottom">-->
+
+                <!--<Spinner-->
+                    <!--android:id="@+id/spinnerForClass"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/textview_background_for_login"></Spinner>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:background="@color/colorAccent"-->
+                    <!--android:gravity="end">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="50dp"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:src="@drawable/ic_arrow_drop_down_white_24dp" />-->
+                <!--</LinearLayout>-->
+
+            <!--</RelativeLayout>-->
+
+        </LinearLayout>
+
+        <RelativeLayout
+
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Linearlayoutclass"
+            >
+
+            <TextView
+                android:id="@+id/txtAddFees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Name            "
+                android:textSize="12dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/edtTheoryTestName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/txtAddFees"
+                android:hint="Enter Theory Test Name"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:maxLength="50"/>
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/btnAddTheoryTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtTheoryTestName"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_bg_rounded_corners"
+                android:textColor="@color/btn_text_color"
+                android:text="Add"
+                android:textAlignment="center"
+                android:textSize="16dp" />
+
+            <!--<Button-->
+                <!--android:id="@+id/btnClear"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/btnAddTheoryTest"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:background="@drawable/button_bg_rounded_corners"-->
+                <!--android:textColor="@color/btn_text_color"-->
+                <!--android:text="Clear"-->
+                <!--android:layout_marginTop="@dimen/activity_horizontal_margin"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textSize="16dp" />-->
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

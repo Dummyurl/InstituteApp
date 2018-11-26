@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/action_bar_home"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <RelativeLayout
+        android:id="@+id/homeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeLayoutbottomNavigation"
+        android:layout_below="@id/appBar">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp">
+
+                <com.mksmcqapplicationtest.CarouselView.CarouselView
+                    android:id="@+id/carouselView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingTop="2dp"
+                    app:fillColor="#FFFFFFFF"
+                    app:pageColor="#00000000"
+                    app:radius="6dp"
+                    app:slideInterval="3000"
+                    app:strokeColor="#FF777777"
+                    app:strokeWidth="1dp" />
+
+                <com.mksmcqapplicationtest.View.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:text="@string/exam_text_view"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18" />
+
+                <include
+                    android:id="@+id/horizonatal_scroll_exam"
+                    layout="@layout/horizontal_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.mksmcqapplicationtest.View.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:text="@string/more_option_text_view"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin6"
+                    app:cardCornerRadius="@dimen/margin6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include
+                            android:id="@+id/layout1"
+                            layout="@layout/rectangle_view_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/layout2"
+                            layout="@layout/rectangle_view_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <com.mksmcqapplicationtest.View.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:id="@+id/txtActiveDeactive"
+                    android:text="Active Deactive"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18"
+                    android:visibility="gone"/>
+
+                <include
+                    android:id="@+id/horizonatal_scroll_active_deactive"
+                    layout="@layout/horizontal_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.mksmcqapplicationtest.View.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:gravity="center"
+                    android:id="@+id/txtUtility"
+                    android:visibility="gone"
+                    android:paddingTop="2dp"
+                    android:text="Utility"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18" />
+
+                <include
+                    android:id="@+id/horizonatal_scroll_utility"
+                    layout="@layout/horizontal_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+                <com.mksmcqapplicationtest.View.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:text="Guest"
+                    android:id="@+id/txtGuest"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18" />
+
+
+                <include
+                    android:id="@+id/horizonatal_scroll_guest"
+                    layout="@layout/horizontal_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!--<include-->
+                    <!--layout="@layout/attendance_view"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:visibility="gone" />-->
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/relativeLayoutbottomNavigation"
+        layout="@layout/home_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

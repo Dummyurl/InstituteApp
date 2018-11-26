@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/levelLinear"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/button_bg_rounded_corners"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageButton
+                android:id="@+id/music_image_button"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/i_music" />
+
+
+
+            <Button
+                android:id="@+id/btnLevel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/btn_text_color"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/test_image_button"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/result" />
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:padding="3dp"
+            android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

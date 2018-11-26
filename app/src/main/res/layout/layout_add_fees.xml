@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackColor">
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/adverties_panel">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <include
+                android:id="@+id/layoutspinnerofclass"
+                layout="@layout/spinner_of_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinnerForStudentName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin6"
+                android:background="@drawable/spinner_back"
+                android:paddingLeft="5dp"
+                android:textSize="@dimen/text_size_16" />
+
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinnerForEducationalYear"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin6"
+                android:background="@drawable/spinner_back"
+                android:paddingLeft="5dp"
+                android:textSize="@dimen/text_size_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtAddFees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:layout_weight="0.5"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:text="@string/Amount"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <EditText
+                        android:id="@+id/edtAddFees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:hint="@string/Enter_Amount_Here"
+                        android:inputType="number"
+                        android:maxLength="7"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.mksmcqapplicationtest.View.CustomButton
+                    android:id="@+id/btnAddFees"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin10"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/button_selector_red"
+                    android:gravity="center"
+                    android:text="@string/add_btn"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="@dimen/margin10" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/adverties_panel"
+        layout="@layout/banner_containt" />
+
+</RelativeLayout>

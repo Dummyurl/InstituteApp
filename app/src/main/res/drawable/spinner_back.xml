@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:left="-2dp" android:right="-2dp" android:top="-2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/transparent" />
+            <stroke android:width="@dimen/dp1" android:color="@color/gray"/>
+        </shape>
+    </item>
+
+    <!--<item>-->
+        <!--<shape android:shape="rectangle">-->
+            <!--<solid android:color="@color/White"/>-->
+            <!--<stroke android:color="@color/gray" android:width="2dp" />-->
+            <!--&lt;!&ndash;corners allow us to make the rounded corners button&ndash;&gt;-->
+
+        <!--</shape>-->
+    <!--</item>-->
+    <item>
+        <rotate
+            android:fromDegrees="90"
+            android:pivotX="100%"
+            android:pivotY="60%"
+            android:toDegrees="135">
+            <rotate
+                android:fromDegrees="135"
+                android:pivotX="100%"
+                android:pivotY="60%"
+                android:toDegrees="45">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/gray" />
+                </shape>
+            </rotate>
+        </rotate>
+    </item>
+</layer-list>

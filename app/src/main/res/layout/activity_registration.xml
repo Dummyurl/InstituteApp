@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/text_view_top_margin_10"
+            android:paddingRight="@dimen/text_view_top_margin_10">
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinnerForClassForGuest"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/spinner_back"
+                android:textSize="@dimen/text_size_16"
+                android:layout_marginTop="@dimen/margin6"
+                android:paddingLeft="5dp"
+                />
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_view_top_margin_10"
+                android:visibility="visible">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtmdFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/FirstName_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_16"/>
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_view_top_margin_10"
+                android:visibility="visible">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtmdMiddleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/MiddleName_hint"
+                    android:textSize="@dimen/text_size_16"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_view_top_margin_10"
+                android:visibility="visible">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtmdLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/LastName_hint"
+                    android:textSize="@dimen/text_size_16"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+
+
+
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_view_top_margin_10"
+                android:visibility="visible">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtmdEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/EmailAddress_hint"
+                    android:imeOptions="actionNext"
+                    android:textSize="@dimen/text_size_16"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_view_top_margin_10"
+                android:visibility="visible">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtmdMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_16"
+                    android:hint="@string/MobileNumber_hint"
+                    android:maxLength="10"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:singleLine="true" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_view_top_margin_10"
+                android:visibility="visible">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtmdpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Password_hint"
+                    android:textSize="@dimen/text_size_16"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+
+            <com.mksmcqapplicationtest.View.InputOpenFieldView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_view_top_margin_10"
+                android:visibility="visible">
+
+                <com.mksmcqapplicationtest.View.CustomEditText
+                    android:id="@+id/txtmdconfirmpassword"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/text_size_16"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ConfirmPassword_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </com.mksmcqapplicationtest.View.InputOpenFieldView>
+
+
+            <LinearLayout
+                android:id="@+id/ll_gender_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.mksmcqapplicationtest.View.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_16"
+                    android:text="@string/gender"
+                     />
+
+                <RadioGroup
+                    android:id="@+id/rg_gender_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+
+                    <RadioButton
+                        android:id="@+id/rdbMale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="@string/male"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdbFemale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="@string/female"
+                        android:textSize="14sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <com.mksmcqapplicationtest.View.CustomButton
+                android:id="@+id/btnmdsignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_selector_red"
+                android:gravity="center"
+                android:text="@string/SignUpButtonText"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

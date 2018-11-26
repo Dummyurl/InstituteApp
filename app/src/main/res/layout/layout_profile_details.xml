@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:padding="@dimen/margin10">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImageIcon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/profile"
+            app:civ_border_color="@color/red_200"
+            app:civ_border_overlay="true"
+            app:civ_border_width="2dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageButtonImageSelector"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/profileImageIcon"
+            android:layout_alignEnd="@+id/profileImageIcon"
+            android:layout_alignRight="@+id/profileImageIcon"
+            android:layout_margin="@dimen/margin10"
+            android:background="@drawable/home_text_round"
+            android:contentDescription="@string/Camera_icon"
+            android:src="@drawable/ic_camera" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin10"
+        android:layout_weight="1.5"
+        android:orientation="vertical"
+        android:padding="@dimen/margin6">
+
+        <com.mksmcqapplicationtest.View.CustomTextViewBold
+            android:id="@+id/txtNameOfStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin6"
+            android:singleLine="true"
+            android:text="@string/FullName_hint"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:tint="@color/colorPrimary"
+                app:srcCompat="@drawable/ic_call_black_24dp" />
+
+            <TextView
+                android:id="@+id/txtMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+
+
+                android:singleLine="true"
+                android:text="@string/mobile_number_hint"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:tint="@color/colorPrimary"
+                app:srcCompat="@drawable/ic_email" />
+
+            <TextView
+                android:id="@+id/txtEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/emailAddress_hint"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

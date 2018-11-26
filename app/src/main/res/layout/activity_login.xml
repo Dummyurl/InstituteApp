@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:alpha="0.8"
+        android:contentDescription="@string/login_background_image_desc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/text_view_top_margin_10"
+        android:paddingRight="@dimen/text_view_top_margin_10">
+
+        <ImageView
+            android:id="@+id/user_profile_photo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/top_margin_35"
+            android:contentDescription="@string/logo_image_desc"
+            android:src="@mipmap/ic_launcher_logo_c" />
+
+
+        <com.mksmcqapplicationtest.View.CustomTextViewBold
+            android:id="@+id/txtwelcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/linear_layout_top_margin_25"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/app_name"
+            android:textColor="@color/White"
+            android:textSize="@dimen/text_size_18" />
+
+        <RelativeLayout
+            android:id="@+id/number_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_view_top_margin_10">
+
+            <ImageView
+                android:id="@+id/number_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/login_background_image_desc"
+                app:srcCompat="@drawable/ic_mobile_white" />
+
+
+            <com.mksmcqapplicationtest.View.ExtendedEditText
+                android:id="@+id/txtmdusername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/number_image"
+                android:hint="@string/mobile_no"
+                android:textSize="@dimen/text_size_18"
+                android:imeOptions="actionGo|actionSearch|actionDone|actionPrevious"
+                android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="@color/White"
+                android:textColorHint="@color/white_alpha"
+                android:textCursorDrawable="@drawable/color_cursor" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/number_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_view_top_margin_5">
+
+            <ImageView
+                android:id="@+id/password_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/password_image_desc"
+                app:srcCompat="@drawable/ic_password" />
+
+            <com.mksmcqapplicationtest.View.CustomEditText
+                android:id="@+id/txtmdpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/password_image"
+                android:layout_centerHorizontal="true"
+                android:hint="@string/password"
+                android:imeOptions="actionGo|actionSearch|actionDone|actionPrevious"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:layout_marginLeft="-2dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_18"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white_alpha"
+                android:textCursorDrawable="@drawable/color_cursor" />
+        </RelativeLayout>
+
+        <com.mksmcqapplicationtest.View.CustomButton
+            android:id="@+id/btnmdsignin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+
+            android:background="@drawable/button_selector_red"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            android:text="@string/login_btn"
+            android:textColor="@color/white" />
+
+
+        <com.mksmcqapplicationtest.View.CustomTextView
+            android:id="@+id/txtForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/text_view_top_margin_5"
+            android:padding="10dp"
+            android:text="@string/forgotpassword_textview_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" />
+
+        <com.mksmcqapplicationtest.View.CustomTextView
+            android:id="@+id/txtGuestLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/text_view_top_margin_5"
+            android:padding="10dp"
+            android:text="@string/create_new_account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/RRsncbar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

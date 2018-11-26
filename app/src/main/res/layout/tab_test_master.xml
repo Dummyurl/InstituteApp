@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/textview_background_for_login"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/colorAccent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/question_mark_logo"
+                    android:padding="5dp"
+                    android:src="@drawable/emam_paper_24" />
+
+            </LinearLayout>
+
+            <com.mksmcqapplicationtest.View.CustomEditText
+                android:id="@+id/txtTestName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/Cardview_row_Exam_Title_hint"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/textview_background_for_login"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/colorAccent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/Cardview_row_Test_Time_hint"
+                    android:padding="5dp"
+                    android:src="@drawable/baseline_alarm_white_24dp" />
+
+            </LinearLayout>
+
+            <com.mksmcqapplicationtest.View.CustomEditText
+                android:id="@+id/txtTestTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/Cardview_row_Test_Time_hint"
+                android:inputType="number"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin6"
+            android:background="@drawable/spin_top_box">
+
+            <Spinner
+                android:id="@+id/spinnerForNegativeMark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toLeftOf="@+id/vLine1"
+                android:layout_toStartOf="@+id/vLine1"
+                android:background="@null"
+                android:focusable="true"
+                android:gravity="center_vertical" />
+
+            <View
+                android:id="@+id/vLine1"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/caseTypSpinArrow1"
+                android:layout_toStartOf="@+id/caseTypSpinArrow1"
+                android:background="@color/ProgressDialogColor" />
+
+            <ImageView
+                android:id="@+id/caseTypSpinArrow1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/downarrow" />
+
+        </RelativeLayout>
+
+
+
+        <com.mksmcqapplicationtest.View.CustomButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_selector_red"
+            android:gravity="center"
+            android:text="@string/btn_save"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+</ScrollView>

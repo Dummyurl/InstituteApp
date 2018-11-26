@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin10"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <com.mksmcqapplicationtest.View.CustomTextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin6"
+            android:text="@string/fa_attendance"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_22"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/edtext1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/mark_attendance_fragment_title"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <com.mksmcqapplicationtest.View.CustomTextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin6"
+            android:text="@string/fa_calender"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_22"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/edtext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/show_attendance_fragment_title"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <com.mksmcqapplicationtest.View.CustomTextView
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin6"
+            android:text="@string/fa_ActiveDeative"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_22"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/edtext3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:minLines="1"
+            android:singleLine="false"
+            android:text="@string/day_wise_report_fragment_title"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <com.mksmcqapplicationtest.View.CustomTextView
+            android:id="@+id/txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin6"
+            android:text="@string/fa_fees"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_22"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/edtext4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/given_mcq_exam_fragment_title"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</LinearLayout>

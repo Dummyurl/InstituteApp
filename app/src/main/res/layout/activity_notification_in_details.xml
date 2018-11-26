@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mksmcqapplicationtest.NotificationActivityInDetails">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/action_bar_home"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <ImageButton
+        android:id="@+id/user_profile_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/appBar"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/ic_launcher_logo_c"
+        android:contentDescription="@string/applicationlogo"
+               android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_profile_photo"
+        android:layout_margin="@dimen/margin6">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/formula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin6"
+            android:orientation="vertical"
+            android:paddingTop="-5dp"
+            app:cardCornerRadius="@dimen/margin6">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="7dp"
+                android:weightSum="4">
+
+
+                <com.mksmcqapplicationtest.View.CustomTextViewBold
+                    android:id="@+id/txtNotificationTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/EditTextColor"
+                    android:textSize="@dimen/text_size_22"
+                    android:textStyle="bold" />
+
+
+                <com.mksmcqapplicationtest.View.CustomTextView
+                    android:id="@+id/txtNotificationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:textAlignment="center"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/text_size_18" />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

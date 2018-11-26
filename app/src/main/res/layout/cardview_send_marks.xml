@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--android:id="@+id/cardview"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_margin="3dp"--><!--android:padding="@dimen/activity_horizontal_margin"--><!--app:cardCornerRadius="8dp">-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imgprofile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profile" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/circle"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearlayoutofattendancedetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNameOfStudent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="3"
+                    android:hint="Student Name"
+                    android:singleLine="true"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtMarks"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:hint="NA"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textAlignment="center" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/circle"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/RecyclerViewBackColor" />
+</RelativeLayout>
+
+    <!--</android.support.v7.widget.CardView>-->

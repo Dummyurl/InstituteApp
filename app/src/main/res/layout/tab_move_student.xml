@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackColor"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/ScrollBar_padding_Bottom"
+        android:paddingLeft="@dimen/ScrollBar_padding_Right"
+        android:paddingRight="@dimen/ScrollBar_padding_Right"
+        android:paddingTop="@dimen/ScrollBar_padding_top">
+
+        <RelativeLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/ScrollBar_padding_Bottom"
+            android:paddingTop="@dimen/ScrollBar_padding_top">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="From Class     "
+                android:textAlignment="center"
+                android:textSize="12dp" />
+
+
+            <include
+                android:id="@+id/layoutspinnerofclass"
+                layout="@layout/spinner_of_class"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/txt1"/>
+
+            <!--<Spinner-->
+
+                <!--android:id="@+id/spinnerFormClass"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_toRightOf="@+id/txt1"-->
+                <!--android:background="@drawable/textview_background_for_login"></Spinner>-->
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="@color/colorAccent"-->
+                <!--android:gravity="end">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:src="@drawable/ic_arrow_drop_down_white_24dp" />-->
+            <!--</LinearLayout>-->
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/chkSelectAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:padding="5dp"
+        android:text="Select All"
+        android:textSize="10dp" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/LLForCheckBox"
+        android:layout_below="@+id/chkSelectAll">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeOfEnable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewOfMoveData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/LLForCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/LLForToClass"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/ckbMarkAsGuest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mark As Guest" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/LLForToClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnMoveClass"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/ScrollBar_padding_Bottom"
+        android:paddingLeft="@dimen/ScrollBar_padding_Right"
+        android:paddingRight="@dimen/ScrollBar_padding_Right"
+        android:paddingTop="@dimen/ScrollBar_padding_top">
+
+        <RelativeLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/ScrollBar_padding_Bottom"
+            android:paddingTop="@dimen/ScrollBar_padding_top">
+
+            <TextView
+
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="To Class     "
+                android:textAlignment="center"
+                android:textSize="12dp" />
+
+            <android.support.v7.widget.AppCompatSpinner xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/spinnerToClass"
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/txt2"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin6"
+                android:background="@drawable/spinner_back"
+                android:paddingLeft="5dp"
+                android:textSize="@dimen/text_size_16" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.mksmcqapplicationtest.View.CustomButton
+        android:id="@+id/btnMoveClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin10"
+        android:background="@drawable/button_selector_red"
+        android:text="@string/move"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
+

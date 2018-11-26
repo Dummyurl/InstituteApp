@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    card_view:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:id="@+id/relativelay"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/relay_bg">
+
+        <RelativeLayout
+            android:id="@+id/relativelay1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/txtLock"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/btn_text_color"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/txtAudioCode"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtLock"
+                android:textAlignment="center"
+                android:textColor="@color/btn_text_color"
+                android:textSize="22dp" />
+
+
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/txtAudioName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativelay1"
+            android:ems="3"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColor="@color/btn_text_color"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

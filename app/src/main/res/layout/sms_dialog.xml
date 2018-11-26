@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="48dp"
+            android:background="#fff"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/text_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#ff000000"
+                    android:textSize="15dp" />
+
+                <ScrollView
+                    android:id="@+id/relative1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_dialog"
+                    android:layout_marginBottom="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/text_dialoga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:text="Dear Parents,"
+                            android:visibility="gone"
+                            android:textColor="#ff000000"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/text_dialogaa"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_dialoga"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:text=" "
+                            android:textColor="#ff000000"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/text_dialogaaa"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/text_dialogaa"
+                            android:layout_marginBottom="10dp"
+                            android:text="Your Son/Daughter is "
+                            android:textColor="#ff000000"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:id="@+id/text_dialog2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text_dialogaaa"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="#FF000000"
+                            android:textSize="15dp"
+                            android:textStyle="italic" />
+
+                        <RelativeLayout
+                            android:id="@+id/relative"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_dialog2">
+
+
+                            <EditText
+                                android:id="@+id/status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:hint="present"
+                                android:singleLine="true"
+                                android:textColor="#ff000000"
+                                android:textSize="15dp"
+                                android:textStyle="italic" />
+
+                            <TextView
+
+                                android:id="@+id/forr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_toRightOf="@+id/status"
+                                android:text=" For "
+                                android:textColor="#ff000000"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/claass"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_toRightOf="@+id/forr"
+                                android:hint=" th English"
+                                android:singleLine="true"
+                                android:textColor="#ff000000"
+                                android:textSize="15dp"
+                                android:textStyle="italic" />
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_below="@+id/relative">
+                            <TextView
+                                android:id="@+id/selecteddate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="3dp"
+                                android:hint="date"
+                                android:textColor="#ff000000"
+                                android:textSize="15dp" />
+                            <TextView
+                                android:id="@+id/regards"
+                                android:layout_below="@+id/selecteddate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="3dp"
+                                android:text="Regards,"
+                                android:textColor="#ff000000"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/claaa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/regards"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="3dp"
+                                android:textColor="#ff000000"
+                                android:textSize="15dp" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </ScrollView>
+
+                <Button
+                    android:id="@+id/Okbtn_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_bg_rounded_corners"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="SEND"
+                    android:textColor="#ffffffff" />
+
+                <Button
+                    android:id="@+id/Canclebtn_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Okbtn_dialog"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_bg_rounded_corners"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="CANCEL"
+                    android:textColor="#ffffffff" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/user_profile_photo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/ic_launcher_logo_c"
+            android:elevation="9dp"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+</RelativeLayout>

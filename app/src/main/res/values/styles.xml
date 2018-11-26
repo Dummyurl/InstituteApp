@@ -1,0 +1,131 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="borderView">
+        <item name="android:background">@drawable/custom_radio_selector</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="ThemeDialogCustom">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="textViewBold">
+
+        <item name="android:color">#000000</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="ProgressBar" parent="@android:style/Widget.ProgressBar">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@color/Transperant</item>
+        <item name="android:indeterminateDrawable">@drawable/circular_progess_dialog</item>
+    </style>
+
+    <style name="ThemeToolbar.NavigationView">
+        <item name="android:listDivider">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/Black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:listPreferredItemHeightSmall">30dp</item>
+
+    </style>
+
+    <style name="ThemeToolbar"></style>
+
+
+    <style name="style_Spinner">
+        <item name="android:background">@drawable/btn_dropdown</item>
+        <item name="android:dropDownSelector">@android:color/transparent</item>
+        <item name="android:popupBackground">#a6417e</item>
+        <item name="android:spinnerMode">dropdown</item>
+
+    </style>
+
+
+    <!--for AppTheme Trasperent-->
+    <style name="TransperentAppTheme" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <!--parent="android:Theme.Holo.Dialog"-->
+    <style name="ProgressDialogTheme" parent="android:Theme.Holo.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@color/colorAccent</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/colorAccent</item>
+        <item name="android:bottomDark">@color/colorAccent</item>
+        <item name="android:bottomMedium">@color/colorAccent</item>
+        <item name="android:centerBright">@color/colorAccent</item>
+        <item name="android:centerDark">@color/colorAccent</item>
+        <item name="android:centerMedium">@color/colorAccent</item>
+        <item name="android:fullBright">@color/colorAccent</item>
+        <item name="android:fullDark">@color/colorAccent</item>
+        <item name="android:topBright">@color/colorAccent</item>
+        <item name="android:topDark">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MasterRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="colorAccent">@color/White</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/White</item>
+    </style>
+
+
+</resources>
+

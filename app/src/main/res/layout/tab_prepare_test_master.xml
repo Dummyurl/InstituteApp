@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSave">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin6"
+                android:background="@drawable/spin_top_box">
+
+                <Spinner
+                    android:id="@+id/spinnerForTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toLeftOf="@+id/vLine1"
+                    android:layout_toStartOf="@+id/vLine1"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:gravity="center_vertical" />
+
+                <View
+                    android:id="@+id/vLine1"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/caseTypSpinArrow1"
+                    android:layout_toStartOf="@+id/caseTypSpinArrow1"
+                    android:background="@color/ProgressDialogColor" />
+
+                <ImageView
+                    android:id="@+id/caseTypSpinArrow1"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:padding="10dp"
+                    android:src="@drawable/downarrow" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/layoutspinnerofclass"
+                layout="@layout/spinner_of_class" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin6"
+                android:background="@drawable/spin_top_box">
+
+                <Spinner
+                    android:id="@+id/spinnerForCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toLeftOf="@+id/vLine2"
+                    android:layout_toStartOf="@+id/vLine2"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:gravity="center_vertical" />
+
+                <View
+                    android:id="@+id/vLine2"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/caseTypSpinArrow2"
+                    android:layout_toStartOf="@+id/caseTypSpinArrow2"
+                    android:background="@color/ProgressDialogColor" />
+
+                <ImageView
+                    android:id="@+id/caseTypSpinArrow2"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:padding="10dp"
+                    android:src="@drawable/downarrow" />
+
+            </RelativeLayout>
+
+
+            <CheckBox
+                android:id="@+id/chkSelectAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Select_All" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewOfQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.mksmcqapplicationtest.View.CustomButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin10"
+        android:layout_marginEnd="@dimen/margin10"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="@dimen/margin10"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_selector_red"
+        android:gravity="center"
+        android:text="@string/btn_save"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

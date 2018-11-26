@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackColor">
+
+    <LinearLayout
+        android:id="@+id/Linearlayoutclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBar"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/ScrollBar_padding_Bottom"
+        android:paddingLeft="@dimen/ScrollBar_padding_Right"
+        android:paddingRight="@dimen/ScrollBar_padding_Right"
+        android:paddingTop="@dimen/ScrollBar_padding_top">
+
+        <include
+            android:id="@+id/layoutspinnerofclass"
+            layout="@layout/spinner_of_class" />
+
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinnerForStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin6"
+            android:background="@drawable/spinner_back"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/text_size_16" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinnerForEducationalYear"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin6"
+            android:background="@drawable/spinner_back"
+            android:paddingLeft="5dp"
+            android:textSize="@dimen/text_size_16" />
+
+
+        <com.mksmcqapplicationtest.View.CustomTextView
+            android:id="@+id/txtTotalFeesOfClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Linearlayoutclass"
+            android:layout_margin="3dp"
+            android:paddingBottom="10dp"
+            android:text="@string/Total_Fees"
+            android:textSize="@dimen/text_size_16" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/adverties_panel"
+        layout="@layout/banner_containt" />
+
+</RelativeLayout>
